@@ -96,7 +96,7 @@ def map_reduce(text, search_words=None):
     return dict(reduced_values)
 
 # Функція побудови графіка
-def visualize_top_words(result, top_n=20):
+def visualize_top_words(result, top_n=10):
     # Visualize the top 10 words and their frequencies using a horizontal bar chart ((dict), top_n=10 ) 
 
     # Sort the word frequencies dictionary by frequency in descending order and select the top N words
@@ -131,7 +131,7 @@ if __name__ == "__main__":
 
         print("Результат підрахунку слів:", result)
         print('Слів в тексті:', text.__len__())
-        print('Слів в різних:', result.__len__())
+        print('Словесний набір тексту:', result.__len__())
         visualize_top_words(result)
     else:
         print("Помилка: Не вдалося отримати вхідний текст.")
